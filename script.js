@@ -13,10 +13,13 @@ input.addEventListener('change', () => {
     reader.onload = (e) => {
         const file = e.target.result;
         const lines = file.split(/\r\n|\n/);
-        lines.sort(() => Math.random() - 0.5);
+        // lines.sort(() => Math.random() - 0.5);
         for(line of lines) {
-            let sentence = '<li>' + line + '</li>';
-            feed.innerHTML += sentence;
+            if (!line.startsWith("Highlight") && !line.startsWith("   ")) {
+                let sentence = '<li>' + line + '</li>';
+                feed.innerHTML += sentence;
+            }
+            
         }
         console.log(lines);
     };

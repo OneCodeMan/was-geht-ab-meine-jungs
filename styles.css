@@ -1,3 +1,8 @@
+body {
+    background-color: #1E282D;
+    color: #B1A793;
+}
+
 div {
     display: flex;
     flex-direction: column;
@@ -10,6 +15,6 @@ div {
 }
 
 li {
-    font-size: 30px;
-    margin: 15px;
+    font-size: 25px;
+    margin: 30px;
 }
